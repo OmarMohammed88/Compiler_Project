@@ -1,0 +1,26 @@
+follow(expression)={(,if,VAR}
+follow(var_declaration)={id}
+follow(ID_assign)={=,(,if,VAR,<=,>=,==,!=,&&,||,*,/,(,ID,+,-}
+follow(simple_expression)={),if,var}
+follow(relop)={(,id,-,+}
+follow(additive_expression)={<=,>=,==,!=,&&,||,),if,var}
+follow(addop)={(,ID,+,-,)}
+follow(term)={<=,>=,==,!=,&&,||,),if,var,*,/}
+follow(mulop)={(,ID,+,-}
+follow(factor)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,- }
+follow(num)={<=,>=,==,!=,&&,||,),if,var,*,/, (,ID,+,-}
+follow(UNSIGNED_NUM)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-}
+follow(SIGNED_NUM)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-}
+follow(pos_num)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-}
+follow(neg_num)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-}
+follow(value)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-}
+follow(INT_NUM)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-}
+follow(FLOAT_NUM)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-}
+follow(CHARACTER)={follow(ATOM)}
+follow(POWER)={(,ID,+,-}
+follow(ATOM)={(,ID,+,-}
+follow(IF_EXPR)={VAR}
+follow(ELIF)={VAR}
+follow(ELSE)={VAR}
+follow(LPAREN)={VAR}
+follow(RPAREN)={<=,>=,==,!=,&&,||,),if,var,*,/,(,ID,+,-,}
