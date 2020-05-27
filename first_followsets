@@ -1,0 +1,26 @@
+first(expression)={VAR}
+first(var_declaration)={VAR}
+first(id_assign)={ID}
+first(relop)={<=,>=,==,!=,&&,||}
+first(addop)={+,-}
+first(mulop)={*,/}
+first(simple_expression)={(,ID,-,+}
+first(additive_expression)={(,ID,-,+}
+first(term)={(,ID,+,-,)}
+first(factor)={(,ID,+,-}
+first(num)={+,-}
+first(Unsigned_num)={0...9,0.0 ...}
+first(Signed num)={+,-}
+first(pos_num)={+}
+first(neg_num)={-}
+first(value)={0...9,0.0 ...}
+first(INT_NUM)={0...9}
+first(FLOAT_NUM)={0.0 .... }
+first(CHARACTER)={A,...,Z,a,...,z}
+first(power)={0..9,0.0 ...}
+first(atom)={0..9 , 0.0... , A..Z|a...z , ID,(,if,VAR,e }
+first(LPAREN)={(}
+first(RPAREN)={)}
+first(IF_EXPR)={if,VAR,e}
+first(ELIF)={VAR}
+first(ELSE)={VAR,e}
