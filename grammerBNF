@@ -1,0 +1,29 @@
+3. expression →var_declaration id_assign = expression | simple_expression | id_assign
+4. var_declaration → VAR  
+5. id_assign → ID 
+6. simple_expression → additive_expression relop additive_expression | additive_expression 
+7. relop → <= | < | > | >= | == | != | && | || 
+8. additive_expression → additive_expression addop term | term 
+9. addop → + | - 
+10. term → term mulop factor | factor 
+11. mulop → * | / 
+12. factor → LPAREN expression RPAREN | id_assign | num 
+13. num → Signed_num |Unsigned_num 
+14. Unsigned_num → value 
+15. Signed_num → pos_num | neg_num 
+16. pos_num → + value 
+17. neg_num → - value 
+18. value → INT_NUM | FLOAT_NUM 
+19. INT_NUM = 0 | 1 | ... |9
+20. CHARACTER = A | B | ... | Z | a | b | ... |z
+21. FLOAT_NUM = 0.0 | 0.1 | .....
+Note: (e) means Ebslon, INT_NUM means integer number, FLOAT_NUM means float numbers
+22. power-> atom | {POW && factor}
+23. atom -> INT_NUM | FLOAT_NUM | CHARACTER | id-assign | LPAREN expression RPAREN | IF_EXPR 
+24. IF_EXPR -> if expression | ELIF expression | {ELSE expression} 
+25. ELIF-> expression 
+26. ELSE -> expression | e
+27. LPAREN -> {(}
+28. RPAREN -> {)}
+
+
